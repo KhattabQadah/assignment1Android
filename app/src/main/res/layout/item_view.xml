@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemViewActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_pic1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/flashlight"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/itemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_pic1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="30dp"
+        android:text="Hello there people"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_pic1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:padding="30dp"
+        android:text="95 Nis"
+        android:textColor="#4CAF50"
+        android:textColorLink="#26A62B"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/buybtnid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:padding="30dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/item_pic1"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/black"
+        android:text="@string/buy" />
+    <Button
+        android:id="@+id/rentbtnid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="60dp"
+        android:padding="30dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/item_pic1"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/black"
+        android:text="@string/rent" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+

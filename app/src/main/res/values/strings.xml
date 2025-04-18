@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">two_activities_app</string>
+    <string name="search">Search</string>
+    <string name="buy">Buy</string>
+    <string name="rent">Rent</string>
+    <string name="checkout">Checkout</string>
+</resources>
