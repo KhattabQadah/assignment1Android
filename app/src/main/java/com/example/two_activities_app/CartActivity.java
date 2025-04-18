@@ -1,6 +1,7 @@
 package com.example.two_activities_app;
 
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,7 +39,17 @@ public class CartActivity extends AppCompatActivity {
 
 
         });
+        binding.TotalPrice.setText("Total: $"+getPrice());
 
+    }
+
+    private String getPrice() {
+        int total=0;
+        for(int i = 0;i<user.getCart().cart.size();i++){
+            int price = Integer.parseInt(user.getCart().cart.get(i).getPrice());
+            total= total+price;
+        }
+        return Integer.toString(total);
     }
 
 }
