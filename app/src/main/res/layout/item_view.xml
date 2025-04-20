@@ -15,30 +15,6 @@
         android:layout_marginTop="20dp"
         />
 
-    <TextView
-        android:id="@+id/itemname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/item_pic1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:padding="30dp"
-        android:text="Hello there people"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/itemprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/item_pic1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:padding="30dp"
-        android:text="95 Nis"
-        android:textColor="#4CAF50"
-        android:textColorLink="#26A62B"
-        android:textStyle="bold" />
     <Button
         android:id="@+id/buybtnid"
         android:layout_width="wrap_content"
@@ -62,6 +38,57 @@
         android:layout_marginTop="100dp"
         android:textColor="@color/black"
         android:text="@string/rent" />
+    <LinearLayout
+
+        android:layout_below="@+id/buybtnid"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/itemNameView"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+
+
+        <TextView
+            android:id="@+id/totalItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10.00"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <Button
+            android:id="@+id/buttonDecrease"
+            android:text="-"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/itemQuantity1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1" />
+
+        <Button
+            android:padding="5dp"
+            android:id="@+id/buttonIncrease"
+            android:text="+"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
 
 
 

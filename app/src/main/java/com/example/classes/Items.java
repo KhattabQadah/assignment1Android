@@ -24,6 +24,15 @@ public class Items implements Rentable {
         this.id=itemsID;
         quantity= (int) ((Math.random() * 20) + 1);;
     }
+    public Items(Items item,int quant){
+        this.id=item.getId();
+        this.images=item.getImages();
+        this.price=item.getPrice();
+        this.rentPrice=item.rentPrice;
+        this.quantity=quant;
+        this.ItemName=item.getItemName();
+
+    }
     public boolean buyItem(){
         if(quantity>0){
             quantity--;

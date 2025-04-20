@@ -2,15 +2,20 @@ package com.example.classes;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User implements Serializable {
     public static final String INTENT_KEY = "myObjectKey";
     String name,password;
     Cart cart;
     ArrayList<ArrayList<Items>> previousOrders;
-
+    public HashMap<Integer,Items> improvedItemList;
     public void setItems(ArrayList<Items> items) {
+        improvedItemList = new HashMap<>();
         this.items = items;
+        for(int i = 0;i<items.size();i++){
+        improvedItemList.put(items.get(i).getId(),items.get(i));
+        }
     }
 
     public ArrayList<Items> getItems() {

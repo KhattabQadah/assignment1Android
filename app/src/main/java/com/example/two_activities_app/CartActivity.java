@@ -30,6 +30,10 @@ public class CartActivity extends AppCompatActivity {
         FloatingActionButton fabCheckout = binding.checkout;
         fabCheckout.setOnClickListener(view -> {
             for(int i=0;i<user.getCart().cart.size();i++){
+
+
+                int tempQuant = user.improvedItemList.get(user.getCart().cart.get(i).getId()).getQuantity();
+                user.improvedItemList.get(user.getCart().cart.get(i).getId()).setQuantity(tempQuant-user.getCart().cart.get(i).getQuantity());
                 user.getCart().cart.get(i).buyItem();
             }
             user.saveorder();
@@ -46,10 +50,11 @@ public class CartActivity extends AppCompatActivity {
     private String getPrice() {
         int total=0;
         for(int i = 0;i<user.getCart().cart.size();i++){
-            int price = Integer.parseInt(user.getCart().cart.get(i).getPrice());
+            int price = user.getCart().cart.get(i).getQuantity()*Integer.parseInt(user.getCart().cart.get(i).getPrice());
             total= total+price;
         }
         return Integer.toString(total);
     }
+
 
 }
