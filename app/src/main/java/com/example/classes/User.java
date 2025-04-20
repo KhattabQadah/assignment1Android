@@ -9,7 +9,7 @@ public class User implements Serializable {
     String name,password;
     Cart cart;
     ArrayList<ArrayList<Items>> previousOrders;
-    public HashMap<Integer,Items> improvedItemList;
+    public static HashMap<Integer,Items> improvedItemList;
     public void setItems(ArrayList<Items> items) {
         improvedItemList = new HashMap<>();
         this.items = items;
@@ -41,5 +41,8 @@ public class User implements Serializable {
 
     public Cart getCart() {
         return cart;
+    }
+    static public Items getItemById(int id){
+        return improvedItemList.get(id);
     }
 }
